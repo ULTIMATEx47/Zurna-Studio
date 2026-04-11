@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zurna Studio — Uygulamalar & Projeler</title>
+  <meta name="description" content="Türkçe odaklı uygulamalar, oyunlar ve araçlar." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- custom cursor -->
+<div class="cursor" id="cursor-dot"  ><div class="cursor-dot"></div></div>
+<div class="cursor" id="cursor-ring"><div class="cursor-ring"></div></div>
+
+<!-- animated bg canvas -->
+<canvas id="bg-canvas"></canvas>
+<div class="noise"></div>
+
+<div class="wrap">
+
+  <!-- ══ HEADER ═══════════════════════════════════ -->
+  <header>
+    <div class="header-line"></div>
+
+    <p class="eyebrow">Zurna Studio — Dijital Projeler</p>
+
+    <h1 class="hero-title">
+      <span class="line">ZURNA</span>
+      <span class="line">STUDIO</span>
+      <span class="line">Koleksiyonu</span>
+    </h1>
+
+    <p class="hero-sub">
+      Türkçe odaklı uygulamalar, oyunlar ve araçlar.
+      Her proje, her sürüm — tek çatı altında.
+    </p>
+
+    <div class="hero-meta">
+      <div class="hero-stat">
+        <span class="hero-stat-num" id="count-apps">4</span>
+        <span class="hero-stat-label">Proje</span>
+      </div>
+      <div class="hero-sep"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" id="count-vers">4</span>
+        <span class="hero-stat-label">Sürüm</span>
+      </div>
+      <div class="hero-sep"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">2026</span>
+        <span class="hero-stat-label">Kuruluş</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-arrow">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 18l7 7 7-7"/></svg>
+      </div>
+      Aşağı kaydır
+    </div>
+  </header>
+
+  <!-- ══ PROJECTS ══════════════════════════════════ -->
+  <main>
+    <div class="section-head">
+      <span class="section-label">Projeler</span>
+      <div class="section-line"></div>
+      <span class="section-num">01</span>
+    </div>
+
+    <div class="cards" id="cards-container">
+
+      <!-- ── ZURNOD ── -->
+      <div class="card-wrapper" data-app="zurnod">
+        <div class="card" onclick="toggleCard('zurnod')">
+          <div class="card-icon-col">💬</div>
+          <div class="card-body">
+            <div class="card-tag">Sosyal & Sohbet</div>
+            <div class="card-title">ZURNOD</div>
+            <div class="card-desc">Discord'dan ilham alan Türkçe sohbet uygulaması. Sunucular, DM'ler, gerçek zamanlı mesajlaşma.</div>
+            <div class="card-pills">
+              <span class="pill">Android</span>
+            </div>
+          </div>
+          <div class="card-chevron-col">
+            <div class="chevron-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="versions-panel">
+          <div class="versions-inner">
+            <div class="ver-header">Sürümler — Zurnod</div>
+            <div class="version-list" id="versions-zurnod"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ZURNA AI ── -->
+      <div class="card-wrapper" data-app="zurnai">
+        <div class="card" onclick="toggleCard('zurnai')">
+          <div class="card-icon-col">🤖</div>
+          <div class="card-body">
+            <div class="card-tag">Yapay Zeka</div>
+            <div class="card-title">ZURNA AI</div>
+            <div class="card-desc">Google Gemini destekli Türkçe yapay zeka sohbet uygulaması. Sorular sor, fikirler üret.</div>
+            <div class="card-pills">
+              <span class="pill">Android</span>
+            </div>
+          </div>
+          <div class="card-chevron-col">
+            <div class="chevron-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="versions-panel">
+          <div class="versions-inner">
+            <div class="ver-header">Sürümler — Zurna AI</div>
+            <div class="version-list" id="versions-zurnai"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ZURNA OS ── -->
+      <div class="card-wrapper" data-app="zurnaos">
+        <div class="card" onclick="toggleCard('zurnaos')">
+          <div class="card-icon-col">🖥️</div>
+          <div class="card-body">
+            <div class="card-tag">İşletim Sistemi</div>
+            <div class="card-title">ZURNA OS</div>
+            <div class="card-desc">Türkçe odaklı, hafif ve özelleştirilebilir işletim sistemi projesi.</div>
+            <div class="card-pills">
+              <span class="pill">Windows</span>
+              <span class="pill">Linux</span>
+            </div>
+          </div>
+          <div class="card-chevron-col">
+            <div class="chevron-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="versions-panel">
+          <div class="versions-inner">
+            <div class="ver-header">Sürümler — Zurna OS</div>
+            <div class="version-list" id="versions-zurnaos"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ZURNACRAFT (coming soon) ── -->
+      <div class="card-wrapper" data-app="zurnacraft">
+        <div class="card coming">
+          <div class="card-icon-col">⛏️</div>
+          <div class="card-body">
+            <div class="card-tag">Oyun</div>
+            <div class="card-title">
+              ZURNACRAFT
+              <span class="badge-coming">Yakında</span>
+            </div>
+            <div class="card-desc">Minecraft'tan ilham alan Türkçe voxel oyunu. Python/Ursina ile geliştirildi, Unity versiyonu yolda.</div>
+            <div class="card-pills">
+              <span class="pill">Windows</span>
+              <span class="pill">Android — yakında</span>
+              <span class="pill">iOS — yakında</span>
+            </div>
+          </div>
+          <div class="card-chevron-col">
+            <div class="chevron-btn"></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /cards -->
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════ -->
+  <footer>
+    <div class="footer-brand">ZURNA<span>.</span>STUDIO</div>
+    <div class="footer-copy">© 2026 — Tüm Haklar Saklıdır</div>
+  </footer>
+
+</div><!-- /wrap -->
+
+<script>
+/* ═══════════════════════════════════════════════════════
+   VERSİYON VERİSİ
+   link: null   → "Yakında" gösterir
+   link: "URL"  → İndir butonu + tıklanınca indirir
+   ═══════════════════════════════════════════════════════ */
+const VERSIONS = {
+  zurnod: [
+    { ver: "v1.5.0", date: "2026", notes: "Sesli sohbet, Görsel, Profil ve daha fazlası", tag: "latest", link: "https://www.mediafire.com/file/1iem76cswuxckv2/Zurnod-1.5.0.apk/file" },
+    { ver: "v1.0.0", date: "2026", notes: "İlk sürüm — DM, sunucu, temel sohbet",               tag: "beta", link: "https://www.mediafire.com/file/8uz9jzgw9817m5s/Zurnod-v1.0.0.apk/file" },
+  ],
+  zurnai: [
+    { ver: "v1.0.0", date: "2026", notes: "Gemini 2.0 Flash destekli ilk sürüm",           tag: "beta", link: "https://www.mediafire.com/file/jfabwqq1izuqqzv/Zurna-Ai.apk/file" },
+  ],
+  zurnaos: [
+    { ver: "v0.1.0", date: "2026", notes: "İlk alfa sürüm",                                     tag: "beta",   link: null },
+  ],
+};
+
+/* ─── versiyon listesi oluştur ─────────────────────── */
+const TAG_META = {
+  latest: { cls: 'tag-latest', label: '● GÜNCEL'  },
+  stable: { cls: 'tag-stable', label: '✓ STABLE'  },
+  beta:   { cls: 'tag-beta',   label: '⚡ BETA'    },
+};
+
+function buildVersions() {
+  let totalVers = 0;
+  for (const [appId, list] of Object.entries(VERSIONS)) {
+    const container = document.getElementById(`versions-${appId}`);
+    if (!container) continue;
+    totalVers += list.length;
+    list.forEach(v => {
+      const { cls, label } = TAG_META[v.tag] || TAG_META.stable;
+      const hasLink = v.link && v.link.length > 0;
+      const el = document.createElement(hasLink ? 'a' : 'div');
+      if (hasLink) { el.href = v.link; el.target = '_blank'; el.rel = 'noopener'; }
+      el.className = `version-item${hasLink ? '' : ' no-link'}`;
+      el.innerHTML = `
+        <span class="ver-tag ${cls}">${label}</span>
+        <div class="ver-info">
+          <div class="ver-num">${v.ver}</div>
+          <div class="ver-notes">${v.notes}</div>
+        </div>
+        <div class="ver-dl">
+          ${hasLink
+            ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/><line x1="5" y1="19" x2="19" y2="19"/></svg> İndir`
+            : `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Yakında`
+          }
+        </div>`;
+      container.appendChild(el);
+    });
+  }
+  document.getElementById('count-vers').textContent = totalVers;
+}
+
+/* ─── kart aç / kapat ──────────────────────────────── */
+function toggleCard(appId) {
+  const wrapper = document.querySelector(`.card-wrapper[data-app="${appId}"]`);
+  if (!wrapper) return;
+  const isOpen = wrapper.classList.contains('open');
+  document.querySelectorAll('.card-wrapper.open').forEach(w => w.classList.remove('open'));
+  if (!isOpen) wrapper.classList.add('open');
+}
+
+/* ─── scroll reveal ────────────────────────────────── */
+function initScrollReveal() {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.card-wrapper').forEach(el => io.observe(el));
+}
+
+/* ─── custom cursor ────────────────────────────────── */
+function initCursor() {
+  const dot  = document.querySelector('#cursor-dot  .cursor-dot');
+  const ring = document.querySelector('#cursor-ring .cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  function animCursor() {
+    dot.parentElement.style.left  = mx + 'px';
+    dot.parentElement.style.top   = my + 'px';
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.parentElement.style.left = rx + 'px';
+    ring.parentElement.style.top  = ry + 'px';
+    requestAnimationFrame(animCursor);
+  }
+  animCursor();
+
+  document.querySelectorAll('a, .card:not(.coming), .version-item:not(.no-link)').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+}
+
+/* ─── canvas particle background ──────────────────── */
+function initCanvas() {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  class Particle {
+    constructor() { this.reset(true); }
+    reset(init) {
+      this.x  = Math.random() * W;
+      this.y  = init ? Math.random() * H : H + 10;
+      this.r  = Math.random() * 1.5 + 0.3;
+      this.vy = -(Math.random() * 0.4 + 0.1);
+      this.vx = (Math.random() - 0.5) * 0.2;
+      this.alpha = Math.random() * 0.5 + 0.1;
+      this.life = 0;
+      this.maxLife = Math.random() * 300 + 200;
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.life++;
+      if (this.life > this.maxLife || this.y < -10) this.reset(false);
+    }
+    draw() {
+      const fade = Math.min(this.life / 60, 1) * Math.min((this.maxLife - this.life) / 60, 1);
+      ctx.globalAlpha = this.alpha * fade;
+      ctx.fillStyle = Math.random() > 0.85 ? '#f0920a' : '#7a6a48';
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  for (let i = 0; i < 120; i++) particles.push(new Particle());
+
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => { p.update(); p.draw(); });
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(loop);
+  }
+  loop();
+}
+
+/* ─── counter animation ────────────────────────────── */
+function animateCount(el, target, duration = 1200) {
+  let start = null;
+  const step = ts => {
+    if (!start) start = ts;
+    const p = Math.min((ts - start) / duration, 1);
+    el.textContent = Math.round(p * target);
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+/* ─── init ─────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  buildVersions();
+  initScrollReveal();
+  initCanvas();
+
+  // counter
+  setTimeout(() => {
+    const totalVers = Object.values(VERSIONS).reduce((s, v) => s + v.length, 0);
+    animateCount(document.getElementById('count-apps'), 4, 1000);
+    animateCount(document.getElementById('count-vers'), totalVers, 1200);
+  }, 900);
+
+  // cursor only on non-touch
+  if (window.matchMedia('(pointer: fine)').matches) initCursor();
+});
+</script>
+</body>
+</html>
