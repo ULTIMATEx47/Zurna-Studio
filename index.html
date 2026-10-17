@@ -43,7 +43,7 @@
       </div>
       <div class="hero-sep"></div>
       <div class="hero-stat">
-        <span class="hero-stat-num" id="count-vers">4</span>
+        <span class="hero-stat-num" id="count-vers">6</span>
         <span class="hero-stat-label">Sürüm</span>
       </div>
       <div class="hero-sep"></div>
@@ -192,8 +192,10 @@
    ═══════════════════════════════════════════════════════ */
 const VERSIONS = {
   zurnod: [
-    { ver: "v1.5.0", date: "2026", notes: "Sesli sohbet, Görsel, Profil ve daha fazlası", tag: "latest", link: "https://www.mediafire.com/file/1iem76cswuxckv2/Zurnod-1.5.0.apk/file" },
-    { ver: "v1.0.0", date: "2026", notes: "İlk sürüm — DM, sunucu, temel sohbet",               tag: "beta", link: "https://www.mediafire.com/file/8uz9jzgw9817m5s/Zurnod-v1.0.0.apk/file" },
+    { ver: "v2.5.0", date: "2026", notes: "Kararlı release sürümü",                            tag: "release", link: "https://www.mediafire.com/file/eb7ov5eoi29374x/Zurnod-v2.5.0.apk/file" },
+    { ver: "v2.0.0", date: "2026", notes: "Sürüm 2.0.0",                                      tag: "old",     link: "https://www.mediafire.com/file/ei7a55l6g0xab5i/Zurnod-v2.0.0.apk/file" },
+    { ver: "v1.5.0", date: "2026", notes: "Sesli sohbet, Görsel, Profil ve daha fazlası",    tag: "old",     link: "https://www.mediafire.com/file/1iem76cswuxckv2/Zurnod-1.5.0.apk/file" },
+    { ver: "v1.0.0", date: "2026", notes: "İlk sürüm — DM, sunucu, temel sohbet",            tag: "beta",    link: "https://www.mediafire.com/file/8uz9jzgw9817m5s/Zurnod-v1.0.0.apk/file" },
   ],
   zurnai: [
     { ver: "v1.0.0", date: "2026", notes: "Gemini 2.0 Flash destekli ilk sürüm",           tag: "beta", link: "https://www.mediafire.com/file/jfabwqq1izuqqzv/Zurna-Ai.apk/file" },
@@ -205,9 +207,11 @@ const VERSIONS = {
 
 /* ─── versiyon listesi oluştur ─────────────────────── */
 const TAG_META = {
-  latest: { cls: 'tag-latest', label: '● GÜNCEL'  },
-  stable: { cls: 'tag-stable', label: '✓ STABLE'  },
-  beta:   { cls: 'tag-beta',   label: '⚡ BETA'    },
+  latest:  { cls: 'tag-latest',  label: '● GÜNCEL'          },
+  release: { cls: 'tag-release', label: '✓ STABLE RELEASE' },
+  stable:  { cls: 'tag-stable',  label: '✓ STABLE'          },
+  old:     { cls: 'tag-old',     label: '● OLD'             },
+  beta:    { cls: 'tag-beta',    label: '⚡ BETA'            },
 };
 
 function buildVersions() {

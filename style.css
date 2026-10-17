@@ -464,9 +464,11 @@ header {
   padding: 0.15rem 0.55rem;
   white-space: nowrap;
 }
-.tag-latest { background: #061a08; border: 1px solid #1a5a20; color: #50c060; }
-.tag-stable { background: #1a1000; border: 1px solid #4a3000; color: var(--amber); }
-.tag-beta   { background: #1a0800; border: 1px solid #5a2800; color: var(--red); }
+.tag-latest  { background: #061a08; border: 1px solid #1a5a20; color: #50c060; }
+.tag-release { background: #061a08; border: 1px solid #1a5a20; color: #50c060; }
+.tag-stable  { background: #1a1000; border: 1px solid #4a3000; color: var(--amber); }
+.tag-beta    { background: #1a0800; border: 1px solid #5a2800; color: var(--red); }
+.tag-old     { background: #13100a; border: 1px solid #2e2416; color: #7a6a48; }
 
 .ver-info { min-width: 0; }
 .ver-num {
