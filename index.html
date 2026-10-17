@@ -225,7 +225,7 @@ function buildVersions() {
       const hasLink = v.link && v.link.length > 0;
       const el = document.createElement(hasLink ? 'a' : 'div');
       if (hasLink) { el.href = v.link; el.target = '_blank'; el.rel = 'noopener'; }
-      el.className = `version-item${hasLink ? '' : ' no-link'}`;
+      el.className = `version-item${hasLink ? '' : ' no-link'} is-${v.tag}`;
       el.innerHTML = `
         <span class="ver-tag ${cls}">${label}</span>
         <div class="ver-info">
